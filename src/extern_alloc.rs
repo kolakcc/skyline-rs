@@ -23,6 +23,7 @@ unsafe impl GlobalAlloc for Allocator {
         libc::free(ptr as *mut libc::c_void)
     }
 
+
     #[inline]
     unsafe fn realloc(&self, ptr: *mut u8, _layout: Layout, new_size: usize) -> *mut u8 {
         libc::realloc(ptr as *mut libc::c_void, new_size) as *mut u8
