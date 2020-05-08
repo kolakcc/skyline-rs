@@ -40,7 +40,7 @@ pub fn main(attrs: TokenStream, item: TokenStream) -> TokenStream {
 
     quote!(
         #attr_code
-        ::skyline::setup!();
+        // ::skyline::setup!();
     ).to_tokens(&mut output);
     main_function.to_tokens(&mut output);
 
